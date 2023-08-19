@@ -8,6 +8,7 @@ export 'src/pages/reply_list_view.dart';
 
 export 'src/transitions/bottom_bar_transitions.dart';
 export 'src/transitions/list_detail_transition.dart';
+export 'src/transitions/nav_rail_transition.dart';
 
 export 'src/utils/animations.dart';
 

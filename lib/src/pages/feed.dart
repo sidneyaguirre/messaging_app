@@ -16,7 +16,9 @@ class Feed extends StatefulWidget {
 class _FeedState extends State<Feed> with SingleTickerProviderStateMixin {
   late final _colorScheme = Theme.of(context).colorScheme;
   late final _backgroundColor = Color.alphaBlend(
-      _colorScheme.primary.withOpacity(0.14), _colorScheme.surface);
+    _colorScheme.primary.withOpacity(0.14),
+    _colorScheme.surface,
+  );
   late final _controller = AnimationController(
     duration: const Duration(milliseconds: 1000),
     reverseDuration: const Duration(milliseconds: 1250),
@@ -38,7 +40,7 @@ class _FeedState extends State<Feed> with SingleTickerProviderStateMixin {
 
     final AnimationStatus status = _controller.status;
 
-    if (width >= 600) {
+    if (width > 610) {
       if (status != AnimationStatus.forward &&
           status != AnimationStatus.completed) {
         _controller.forward();
@@ -52,7 +54,7 @@ class _FeedState extends State<Feed> with SingleTickerProviderStateMixin {
 
     if (!controllerInitialized) {
       controllerInitialized = true;
-      _controller.value = width >= 600 ? 1 : 0;
+      _controller.value = width > 610 ? 1 : 0;
     }
   }
 
@@ -86,10 +88,10 @@ class _FeedState extends State<Feed> with SingleTickerProviderStateMixin {
                   color: _backgroundColor,
                   child: ListDetailTransition(
                     animation: _railAnimation,
-                    first: EmailListView(
+                    emails: EmailListView(
                       currentUser: widget.currentUser,
                     ),
-                    second: const ReplyListView(),
+                    replies: const ReplyListView(),
                   ),
                 ),
               ),

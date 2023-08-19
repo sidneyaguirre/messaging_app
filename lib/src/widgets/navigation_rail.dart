@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:mock_messaging_app/mock_messaging.dart';
-import 'package:mock_messaging_app/src/transitions/nav_rail_transition.dart';
-import 'package:mock_messaging_app/src/widgets/animated_floaring_action_button.dart';
 
 class CustomNavigationRail extends StatelessWidget {
   const CustomNavigationRail({
