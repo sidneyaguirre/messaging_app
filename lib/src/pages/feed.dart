@@ -84,8 +84,12 @@ class _FeedState extends State<Feed> with SingleTickerProviderStateMixin {
               Expanded(
                 child: Container(
                   color: _backgroundColor,
-                  child: EmailListView(
-                    currentUser: widget.currentUser,
+                  child: ListDetailTransition(
+                    animation: _railAnimation,
+                    first: EmailListView(
+                      currentUser: widget.currentUser,
+                    ),
+                    second: const ReplyListView(),
                   ),
                 ),
               ),

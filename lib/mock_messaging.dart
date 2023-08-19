@@ -4,8 +4,10 @@ export 'src/models/destinations.dart';
 
 export 'src/pages/emails_view.dart';
 export 'src/pages/feed.dart';
+export 'src/pages/reply_list_view.dart';
 
 export 'src/transitions/bottom_bar_transitions.dart';
+export 'src/transitions/list_detail_transition.dart';
 
 export 'src/utils/animations.dart';
 
