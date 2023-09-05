@@ -1,4 +1,4 @@
-name: mock_messaging_app
+name: messaging_app
 description: multiplatform mock_messaging_app.
 publish_to: 'none'
 version: 0.1.0
